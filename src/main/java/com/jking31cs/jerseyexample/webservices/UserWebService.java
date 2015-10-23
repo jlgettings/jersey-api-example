@@ -7,6 +7,7 @@ import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -19,7 +20,7 @@ import com.jking31cs.jerseyexample.stores.UserStore;
  * This web service handles all the different http calls from a client to create, read, update, and delete TodoLists.
  * This is done using Jersey/JAX-RS (Java Application Rest Service API).
  */
-@Path("api/user")
+@Path("api/users")
 public class UserWebService {
 
     private final UserStore store;
@@ -60,8 +61,8 @@ public class UserWebService {
     @DELETE
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public User deleteUser(@PathParam("id") Long id, User user) {
-    	return store.delete(user);
+    public User deleteUser(@PathParam("id") Long id) {
+    	return store.delete(store.get(id));
     }
     
 }
