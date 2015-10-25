@@ -16,10 +16,6 @@ import javax.ws.rs.core.MediaType;
 import com.jking31cs.jerseyexample.objects.User;
 import com.jking31cs.jerseyexample.stores.UserStore;
 
-/**
- * This web service handles all the different http calls from a client to create, read, update, and delete TodoLists.
- * This is done using Jersey/JAX-RS (Java Application Rest Service API).
- */
 @Path("api/users")
 public class UserWebService {
 

@@ -8,9 +8,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 
-/**
- * Contains basic information about a User, specifically a name and email address.
- */
 @Entity
 public class User {
 

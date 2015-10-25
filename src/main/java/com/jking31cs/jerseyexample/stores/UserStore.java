@@ -7,9 +7,6 @@ import com.jking31cs.jerseyexample.objects.User;
 import javax.inject.Inject;
 import java.util.List;
 
-/**
- * User store object that updates and retrieves information that's on the Datastore.
- */
 public class UserStore {
 
     private final Objectify objectify;
